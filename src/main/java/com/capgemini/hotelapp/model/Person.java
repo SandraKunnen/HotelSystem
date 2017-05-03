@@ -4,6 +4,7 @@ package com.capgemini.hotelapp.model;
  * Created by DIVELDHU on 3-5-2017.
  */
 public class Person {
+<<<<<<< HEAD
     String name;
     int age;
 
@@ -11,6 +12,10 @@ public class Person {
         this.name = name;
         this.age = age;
     }
+=======
+    private String name;
+    private int age;
+>>>>>>> origin/master
 
     public int getAge() {
         return age;
