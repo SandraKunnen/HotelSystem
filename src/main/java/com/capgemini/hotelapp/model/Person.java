@@ -4,8 +4,8 @@ package com.capgemini.hotelapp.model;
  * Created by DIVELDHU on 3-5-2017.
  */
 public class Person {
-    String name;
-    int age;
+    private String name;
+    private int age;
 
     Person(String name, int age) {
         this.name = name;
