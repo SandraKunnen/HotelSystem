@@ -1,5 +1,7 @@
 package com.capgemini.hotelapp.controller;
 
+import com.capgemini.hotelapp.model.BoekingsRegister;
+import com.capgemini.hotelapp.model.Gast;
 import com.capgemini.hotelapp.model.Page;
 import com.capgemini.hotelapp.model.Person;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,10 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class PageController {
 
     @RequestMapping(value = "/api/page", method = RequestMethod.GET)
-    public Page getPage (){
-        Page p = new Page();
-        p.setTitle("Hallo");
-        p.setContent("Dit is de inhoud.");
-        return p;
+    public Gast getPage (){
+        BoekingsRegister boekingsRegister = new BoekingsRegister();
+        return boekingsRegister.getEersteGast();
     }
 }

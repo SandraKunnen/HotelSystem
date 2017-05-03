@@ -9,9 +9,9 @@ import java.util.Scanner;
  * Created by diveldhu on 20-4-2017.
  */
 public class BoekingsRegister {
-    private static ArrayList<Gast> gastenRegister = new ArrayList<>();
-    private static ArrayList<Boeking> boekingsRegister = new ArrayList<>();
-    private static ArrayList<Kamer> hotelKamers = new ArrayList<>();
+    private static ArrayList<Gast> gastenRegister = new ArrayList();
+    private static ArrayList<Boeking> boekingsRegister = new ArrayList();
+    private static ArrayList<Kamer> hotelKamers = new ArrayList();
     private static int AANTALKAMERS = 8;
 
     // constructor. Deze maakt alle kamers aan en legt hun eigenschappen vast.
@@ -44,7 +44,7 @@ public class BoekingsRegister {
         }
         System.out.printf("Start boeking op datum "+ startDatumBoeking.toString()+ " en eindig boeking op " + eindDatumBoeking.toString());
         System.out.println("Beschikbare kamers zijn:");
-        toonBeschikbareKamers();
+        //toonBeschikbareKamers();
         System.out.println("Voor welke kamer wilt u reserveren?");
         Kamer kamer = getKamerOBVNummer(Integer.parseInt(input.next()));
         //Period periode = Period.between(startDatumBoeking.toLocalDate(), eindDatumBoeking.toLocalDate());
@@ -85,7 +85,7 @@ public class BoekingsRegister {
 
     public void toonGasten(){
         for (Gast g : gastenRegister) {
-            System.out.print(g.getNaam() + " " + g.getAdres() + " "+ g.getWoonplaats() + " " + g.getLand() + " " + g.getTelefoonNummer() + " " g.getBijzonderheden());
+            System.out.print(g.getNaam() + " " + g.getAdres() + " "+ g.getWoonplaats() + " " + g.getLand() + " " + g.getTelefoonNummer() + " "+ g.getBijzonderheden());
         }
     }
 
@@ -154,5 +154,8 @@ public class BoekingsRegister {
             }
         }
         return null;
+    }
+    public Gast getEersteGast(){
+        return gastenRegister.get(0);
     }
 }

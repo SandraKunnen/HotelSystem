@@ -8,8 +8,6 @@ public interface Gast {
     public void setNaam(String s);
     public String getAdres();
     public void setAdres(String s);
-    public String getPostcode();
-    public void setPostcode();
     public String getWoonplaats();
     public void setWoonplaats(String s);
     public String getLand();
