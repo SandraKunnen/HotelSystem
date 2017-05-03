@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+
 
 @RestController
 public class PageController {
@@ -17,5 +19,11 @@ public class PageController {
     public Gast getPage (){
         BoekingsRegister boekingsRegister = new BoekingsRegister();
         return boekingsRegister.getEersteGast();
+    }
+
+    @RequestMapping(value = "/api/guests", method = RequestMethod.GET)
+    public ArrayList getGuests(){
+        BoekingsRegister b = new BoekingsRegister();
+        return b.getGastenLijst();
     }
 }

@@ -158,4 +158,7 @@ public class BoekingsRegister {
     public Gast getEersteGast(){
         return gastenRegister.get(0);
     }
+    public ArrayList getGastenLijst() {
+        return gastenRegister;
+    }
 }
