@@ -5,7 +5,14 @@ package com.capgemini.hotelapp.model;
  */
 public class Result {
 
-    String string;
+    String output;
 
-    public Result(string);
+    public String getOutput() {
+        return output;
+    }
+
+    public void setOutput(String output) {
+        this.output = output;
+    }
+
 }

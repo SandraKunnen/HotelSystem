@@ -1,14 +1,14 @@
 package com.capgemini.hotelapp.model;
 
 public class Input {
-    private String input;
+    private String string;
 
     public String getInput() {
-        return input;
+        return string;
     }
 
     public void setInput(String input) {
-        this.input = input;
+        this.string = input;
     }
 
 }

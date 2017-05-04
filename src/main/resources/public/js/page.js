@@ -12,5 +12,4 @@ $("#buttonGuestInformation").click(function(){
             console.log(guestregister);
             $("#body").text(guestregister[0].naam);
         })
-
 });

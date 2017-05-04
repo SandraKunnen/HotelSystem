@@ -1,10 +1,10 @@
 package com.capgemini.hotelapp.controller;
 
+import com.capgemini.hotelapp.model.Input;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.xml.transform.Result;
 
 /**
  * Created by EHEIJDEN en SAKUNNEN on 4-5-2017.
@@ -12,8 +12,11 @@ import javax.xml.transform.Result;
 @RestController
 public class InputController {
     @RequestMapping(value = "/api/page", method = RequestMethod.POST)
-    public Result result() {
-        Result result = new Result ("The answer to the Universe!");
-        return result;
+    public String banaan(@RequestBody Input appel) {
+        if (appel.getInput().equals("42")) {
+            String result = new String("The answer to the Universe!");
+            return result;
+        }
+        return null;
     }
 }
