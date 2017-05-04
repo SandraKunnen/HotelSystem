@@ -1,14 +1,15 @@
 package com.capgemini.hotelapp.model;
 
 public class Input {
-    private String string;
-
-    public String getInput() {
-        return string;
+    public String getTekst() {
+        return tekst;
     }
 
-    public void setInput(String input) {
-        this.string = input;
+    public void setTekst(String tekst) {
+        this.tekst = tekst;
     }
+
+    private String tekst;
+
 
 }

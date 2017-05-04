@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class InputController {
     @RequestMapping(value = "/api/page", method = RequestMethod.POST)
     public String banaan(@RequestBody Input appel) {
-        if (appel.getInput().equals("42")) {
+        if (appel.getTekst().equals("42")) {
             String result = new String("The answer to the Universe!");
             return result;
         }

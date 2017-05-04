@@ -3,7 +3,7 @@
 $('#submit').click(function(e){            //Als je op submit klikt dan start de functie
     e.preventDefault();
 
-    var formData = {string:$("#input").val()};
+    var formData = {tekst:$("#input").val()};
     console.log(formData);
 
     $.ajax(
@@ -15,9 +15,10 @@ $('#submit').click(function(e){            //Als je op submit klikt dan start de
           success: function(result){
                 //data server
             console.log(result);
-            var resultToShow = result.output;
+            $("#result").text(result);
+            //var resultToShow = result.output;
 
-            $("#result").append(resultToShow);
+            //$("#result").append(resultToShow);
     }//,
 //  error: function(jqXHR, textStatus, errorThrown){
 //  }
